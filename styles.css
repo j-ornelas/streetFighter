@@ -6,6 +6,19 @@ body{
   background-color:#444;
   font-size: 18px;
 }
+
+.bg {
+    /* The image used */
+    background-image: url("assets/stage.gif");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
@@ -20,8 +33,16 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
-  border:10px solid red;
+
+.fighter{
+/*  border:10px solid blue;
+  border-radius:10px;*/
+  position:absolute;
+  transition-duration: 19s;
+}
+.blinkyFighter{
+  border:10px solid blue;
   border-radius:10px;
   position:absolute;
 }
+
