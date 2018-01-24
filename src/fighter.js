@@ -3,7 +3,7 @@ var Fighter = function(top, left, timeBetweenSteps) {
   this.top = top
   this.left = left
   this.step();
-  this.setPosition(top, left)
+  // this.setPosition(top, left)
 }
 
 Fighter.prototype.step = function() {
@@ -23,6 +23,10 @@ Fighter.prototype.setPosition = function(top, left) {
       left: left
   };
   this.$node.css(styleSettings);
+};
+
+var getRandomInt = function(max) {
+  return Math.floor(Math.random() * max);
 };
 
   // now that we have defined the Fighter object, we can start setting up important parts of it by calling the methods we wrote

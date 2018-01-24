@@ -23,7 +23,7 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var fighter = new fighterMakerFunction(
-      $("body").height() * Math.random(),
+      $("body").height() - 100,
       $("body").width() * Math.random(),
       Math.random() * 1000
     );

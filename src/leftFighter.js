@@ -1,10 +1,39 @@
 var LeftFighter = function(top, left, timeBetweenSteps) {
   Fighter.call(this, top, left, timeBetweenSteps);
+
+  this.fighterList = [{
+    src: 'assets/kenLeft.gif',
+    height: 140
+  }, {
+    src: 'assets/chunliLeft.gif',
+    height: 175
+  }, {
+    src: 'assets/elenaLeft.gif',
+    height: 200
+  }, {
+    src: 'assets/ibukiLeft.gif',
+    height: 200
+  }, {
+    src: 'assets/makotoLeft.gif',
+    height: 200
+  }, {
+    src: 'assets/ryuLeft.gif',
+    height: 200
+  }, {
+    src: 'assets/seanLeft.gif',
+    height: 160
+  }];
+  var index = getRandomInt(this.fighterList.length);
+
+  this.setPosition(
+    $(".bg").height() - 135, 
+    ($(".bg").width() * Math.random() / 2 * 1.2) - 75)
   this.$imageSource = $('<img></img>');
-  this.$imageSource.attr('src', 'assets/seanLeft.gif')
+  this.$imageSource.src = this.fighterList[index];
+  this.$imageSource.attr('src', this.fighterList[index].src)
   this.$node.attr('class', 'fighter')
   this.$imageSource.appendTo(this.$node)
-  
+
 }
 LeftFighter.prototype = Object.create(Fighter.prototype)
 LeftFighter.prototype.constructor = LeftFighter;
