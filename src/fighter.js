@@ -1,5 +1,5 @@
 var Fighter = function(top, left, timeBetweenSteps) {
-  this.$node = $('<span></span>');
+  this.$node = $('<a></a>');
   this.top = top
   this.left = left
   this.step();

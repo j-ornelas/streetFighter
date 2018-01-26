@@ -31,7 +31,7 @@ $(document).ready(function() {
     $('body').append(fighter.$node);
   });
 
-
+  $('.fighter').on('click', lineUp)
   $('.lineUp').on('click', lineUp)
 });
 

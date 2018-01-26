@@ -1,6 +1,6 @@
 var BlinkyFighter = function(top, left, timeBetweenSteps) {
   Fighter.call(this, top, left, timeBetweenSteps);
-  this.$node.attr('class', 'fighter')
+  this.$node.attr('class', 'blinkyFighter')
 
 }
 BlinkyFighter.prototype = Object.create(Fighter.prototype)

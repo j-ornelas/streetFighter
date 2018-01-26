@@ -4,12 +4,13 @@ var RightFighter = function(top, left, timeBetweenSteps) {
 
   this.setPosition(
     $(".bg").height() - 135, 
-    (($(".bg").width() / 2 ) * Math.random()  * 2) )
+    (($(".bg").width() / 2 )  + ($(".bg").width() / 2 ) * Math.random()))
 
   this.$imageSource = $('<img></img>');
-  this.$imageSource.attr('src', 'assets/sakura.gif')
-  this.$imageSource.attr('height', 100)
+  this.$imageSource.attr('src', 'assets/ryuRight.gif')
+  this.$imageSource.attr('height', 110)
   this.$node.attr('class', 'fighter')
+  this.$node.attr('href', '#')
   this.$imageSource.appendTo(this.$node)
 
 }

@@ -5,3 +5,9 @@ var lineUp = function(){
   	window.fighters[i].setPosition(tempTop,0)
   }
 }
+
+var singleLine = function(obj) {
+  var tempTop = this.top
+  var tempLeft = this.left
+  this.setPosition(0,0)
+}

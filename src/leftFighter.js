@@ -32,7 +32,13 @@ var LeftFighter = function(top, left, timeBetweenSteps) {
   this.$imageSource.src = this.fighterList[index];
   this.$imageSource.attr('src', this.fighterList[index].src)
   this.$node.attr('class', 'fighter')
+  this.$node.attr('href', '#')
+  this.$node.on('click', function(fighter){
+    $('img').attr({src: 'assets/sakura.gif',
+                   height: 100})
+  })
   this.$imageSource.appendTo(this.$node)
+
 
 }
 LeftFighter.prototype = Object.create(Fighter.prototype)
@@ -45,4 +51,10 @@ LeftFighter.prototype.step = function() {
     // See http://api.jquery.com/category/effects/ for this and
     // other effects you can use on a jQuery-wrapped html tag.
     // this.$node.toggle();
-  };
+};
+//this doesn't work vvv
+LeftFighter.prototype.singleLine = function() {
+  var tempTop = this.top
+  var tempLeft = this.left
+  this.$node.setPosition(0,0)
+}
